@@ -24,13 +24,16 @@ pixi run counter      # the counter example
 pixi run chat         # chat with a local OpenAI-compatible LLM (Ollama, LM Studio)
 ```
 
-### For agentic development
+### For agentic development (recommended)
 
-The `ambler-*` skills live in `.agents/skills/`. Install Modular's Mojo skills alongside them, which also symlinks every skill into `.claude/skills/` for Claude Code:
+Install the Ambler skills, plus Modular's Mojo skills so agents write current Mojo syntax, using [`skills`](https://github.com/argenkiwi/skills):
 
 ```bash
+npx skills add argenkiwi/ambler-mojo
 npx skills add modular/skills --skill mojo-syntax --skill new-modular-project --skill mojo-python-interop
 ```
+
+In a clone of this repo, the `ambler-*` skills are already in `.agents/skills/`. Run the second command to link every skill into `.claude/skills/` for Claude Code.
 
 To bootstrap a new project from your agent session:
 
