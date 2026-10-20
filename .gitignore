@@ -1,0 +1,25 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# Mojo build caches
+__mojocache__/
+
+# --- Environment and Secrets ---
+.env
+.env.*
+
+# --- OS Specific ---
+.DS_Store
+.DS_Store?
+._*
+
+# --- Agents ---
+# Claude Code discovers skills via symlinks into .agents/skills/; recreate
+# them with `npx skills add` (see README).
+.claude/
+.agents/settings.local.json
+
+# --- Azk (Ambler Zettelkasten) ---
+# Binary SQLite file: not diffable/mergeable, so it's local-only per workstation.
+.azk/
